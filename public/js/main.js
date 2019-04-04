@@ -16,11 +16,13 @@ campo.on ("input", function () {
     
     var conteudo = campo.val (); // Ler os value's.
 
+    var conteudoSemEspaco = conteudo.replace(/\s+/g,''); // Exp. regular p/ n contar os espaços.
+
     // Contador de palavras.
-    var quantidadePalavras = conteudo.split (/\S+/).length - 1; // Exp. regular p/ n contar os espaços.
+    var quantidadePalavras = conteudo.split (/\s+/).length - 1; // Exp. regular p/ n contar os espaços.
     $("#contador-palavras").text (quantidadePalavras);
 
     // Contador de caracteres.
-    var quantidadeCaracteres = conteudo.length;
+    var quantidadeCaracteres = conteudoSemEspaco.length;
     $("#contador-caracteres").text (quantidadeCaracteres);
 });
