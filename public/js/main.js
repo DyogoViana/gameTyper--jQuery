@@ -26,3 +26,25 @@ campo.on ("input", function () {
     var quantidadeCaracteres = conteudoSemEspaco.length;
     $("#contador-caracteres").text (quantidadeCaracteres);
 });
+
+
+// Cronômentro.
+var tempoRestante = $("#tempo-digitacao").text();
+
+campo.one ("focus", function () {
+
+    var cronometroID = setInterval (function () {
+        tempoRestante--;
+        $("#tempo-digitacao").text (tempoRestante);
+        
+        if (tempoRestante < 1) {
+            campo.attr ("disabled", true);
+            clearInterval (cronometroID);
+        }
+    }, 1000);
+});
+
+
+// Anexos ---------------------------------------------------------------------------------------------
+
+// campo.one = executa apenas uma vez. Não entra em loop.
