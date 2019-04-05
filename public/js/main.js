@@ -48,10 +48,11 @@ function iniciarContadores () {
 
 // Cronômentro.
 function iniciarCronometro () {
-
     var tempoRestante = $("#tempo-digitacao").text();
 
     campo.one ("focus", function () {
+        $("#botao-reiniciar").attr("disabled", true);
+
         var cronometroID = setInterval (function () {
             tempoRestante--;
             $("#tempo-digitacao").text(tempoRestante);
@@ -59,6 +60,7 @@ function iniciarCronometro () {
             if (tempoRestante < 1) {
                 campo.attr("disabled", true);
                 clearInterval(cronometroID);
+                $("#botao-reiniciar").attr("disabled", false);
             }
         }, 1000);
     });
