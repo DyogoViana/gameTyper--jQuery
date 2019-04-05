@@ -60,6 +60,7 @@ function iniciarCronometro () {
             if (tempoRestante < 1) {
                 campo.attr("disabled", true);
                 clearInterval(cronometroID);
+                campo.addClass("campo-desativado");
                 $("#botao-reiniciar").attr("disabled", false);
             }
         }, 1000);
