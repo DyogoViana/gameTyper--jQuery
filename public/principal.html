@@ -4,24 +4,37 @@
     <meta charset="UTF-8">
     <title>Game Typer</title>
     <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <div class="container">
         <h1 class="center">Game Typer</h1>
-        <p class="frase center">Esta frase tem seis belas palavras.</p>
+
+        <!-- texto -->
+        <p class="frase center">Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptatum, totam cupiditate omnis alias unde reiciendis dolores, ad ratione delectus officia repudiandae soluta commodi beatae labore eius. Provident, quasi odio.</p>
 
         <!-- Modelo a ser escrito -->
         <ul class="info center">
-            <li><span id="tamanho-frase">0</span> palavras.</li>
-            <li><span id="tempo-digitacao">3</span> segundos</li>
+            <li>
+                <i class="small material-icons icones">description</i>
+                <span id="tamanho-frase">0</span> palavras.
+            </li>
+            <li>
+                <i class="small material-icons icones">query_builder</i>
+                <span id="tempo-digitacao">3</span> segundos
+            </li>
         </ul>
 
         <!-- Campo digitação -->
         <textarea class="campo-digitacao" cols="40" rows="8"></textarea>
         
         <!-- Botão reiniciar jogo -->
-        <button id="botao-reiniciar">Reiniciar jogo</button>
+        <div class="botoes">
+            <a id="botao-reiniciar" class="btn-floating btn-large waves-effect waves-light red">
+                <i class="material-icons">restore</i>
+            </a>
+        </div>
 
         <!-- Contador -->
         <ul class="center">
