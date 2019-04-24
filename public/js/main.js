@@ -52,7 +52,7 @@ function iniciarCronometro () {
     var tempoRestante = $("#tempo-digitacao").text();
 
     campo.one ("focus", function () {
-        $("#botao-reiniciar").attr("disabled", true);
+        // $("#botao-reiniciar").attr("disabled", true);
 
         var cronometroID = setInterval (function () {
             tempoRestante--;
@@ -61,8 +61,8 @@ function iniciarCronometro () {
             if (tempoRestante < 1) {
                 campo.attr("disabled", true);
                 clearInterval(cronometroID);
-                campo.toggleClass("campo-desativado");
-                $("#botao-reiniciar").attr("disabled", false);
+                campo.addClass("campo-desativado");
+                // $("#botao-reiniciar").attr("disabled", false);
             }
         }, 1000);
     });
@@ -89,6 +89,21 @@ function inicializaMarcadores() {
 }
 
 
+
+// Pontuação do placar.
+function inserePlacar() {
+    var corpoTabela = $(".placar").find("tbody");
+    var usuario = "Seu-nome";
+    var numeroPalavras = $("contador-palavras").text();
+
+    var linha = 
+        "<tr>" +
+            "<td>" + usuario + "</td>" +
+            "<td>" + numeroPalavras + "</td>" +   
+        "</tr>";
+
+    corpoTabela.prepend(linha);
+}
 
 // Botão de reiniciar o jogo.
 $("#botao-reiniciar").click (reiniciarJogo);
