@@ -95,15 +95,25 @@ function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
     var usuario = "Seu-nome";
     var numeroPalavras = $("contador-palavras").text();
+    var botaoRemover = "<a href='#'><i class='small material-icons'>delete</i></a>";
 
     var linha = 
         "<tr>" +
             "<td>" + usuario + "</td>" +
-            "<td>" + numeroPalavras + "</td>" +   
+            "<td>" + numeroPalavras + "</td>" +
+            "<td>" + botaoRemover + "</td>" + 
         "</tr>";
 
     corpoTabela.prepend(linha);
 }
+
+
+$(".botaoRemover").click(event, function() {
+    event.preventDefault();
+    $(this).parent().parent().remove();
+}) 
+
+
 
 // Botão de reiniciar o jogo.
 $("#botao-reiniciar").click (reiniciarJogo);
