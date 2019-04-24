@@ -10,6 +10,7 @@
 /* Frase modelo */
 .frase {
     font-size: 1.5rem;
+    text-align: left;
 }
 
 /* textarea desativado (fim do tempo). */
@@ -19,4 +20,13 @@
 
 .icones {
     vertical-align: middle;
+}
+
+/* Bordas que mostram se a digitação tá certa. */
+.bordaCampoCerto {
+    border: 5px solid rgb(4, 206, 4);
+}
+
+.bordaCampoErrado {
+    border: 5px solid tomato;
 }
