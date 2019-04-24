@@ -1,1 +1,1 @@
-# gameTyper--jQuery
+# gameTyper--jQuery e Ajax
