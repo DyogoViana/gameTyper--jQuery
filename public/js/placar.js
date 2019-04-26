@@ -49,7 +49,14 @@ function novaLinhaPlacar(usuario, palavras) {
 
 
 // Botão de remover a pontuação do jogador.
-function removeLinhaPlacar (event) {
+function removeLinhaPlacar() {
+    var linhaPlacar = $(this).parent().parent();
+    
+    linhaPlacar.fadeOut(1000);
+
+    setTimeout(function() {
+        linhaPlacar.remove();
+    }, 1000);
+
     event.preventDefault();
-    $(this).parent().parent().remove();
 }
