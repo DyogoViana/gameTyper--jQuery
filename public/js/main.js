@@ -3,6 +3,10 @@
 // Tempo inicial.
 var tempoInicial = $("#tempo-digitacao").text();
 
+// Campo de digitação;
+var campo = $(".campo-digitacao");
+
+
 // Carrega tudo quando a página for carregada. -- $(document).ready() -- nota no final.
 $(function() {
     atualizaTamanhoFrase();
@@ -11,7 +15,6 @@ $(function() {
     inicializaMarcadores();
     $("#botao-reiniciar").click(reiniciarJogo);
 });
-
 
 
 // Atualiza o tamanho da frase. Modelo a ser escrito.
@@ -23,10 +26,6 @@ function atualizaTamanhoFrase () {
     tamanhoFrase.text(numeroPalavras);
 }
 
-
-
-// Campo de digitação;
-var campo = $(".campo-digitacao");
 
 // Iniciar contadores de palavras e caracteres.
 function iniciarContadores () {
@@ -46,14 +45,11 @@ function iniciarContadores () {
 }
 
 
-
 // Cronômentro.
 function iniciarCronometro () {
     var tempoRestante = $("#tempo-digitacao").text();
 
     campo.one ("focus", function () {
-        // $("#botao-reiniciar").attr("disabled", true);
-
         var cronometroID = setInterval (function () {
             tempoRestante--;
             $("#tempo-digitacao").text(tempoRestante);
@@ -64,15 +60,6 @@ function iniciarCronometro () {
             }
         }, 1000);
     });
-}
-
-
-
-// Finaliza o jogo. Desabilita o campo de txt e coloca o fundo cinza.
-function finalizaJogo() {
-    campo.attr("disabled", true);
-    campo.toggleClass("campo-desativado");
-    inserePlacar();
 }
 
 
@@ -95,21 +82,26 @@ function inicializaMarcadores() {
 }
 
 
+// Finaliza o jogo. Desabilita o campo de txt e coloca o fundo cinza.
+function finalizaJogo() {
+    campo.attr("disabled", true);
+    campo.toggleClass("campo-desativado");
+    inserePlacar();
+}
+
 
 // Botão de reiniciar o jogo.
-$("#botao-reiniciar").click (reiniciarJogo);
-
 function reiniciarJogo () {
-    campo.attr ("disabled", false);
-    campo.val ("");
+    campo.attr("disabled", false);
+    campo.val("");
 
     $("#contador-palavras").text("0");
     $("#contador-caracteres").text("0");
     $("#tempo-digitacao").text(tempoInicial);
 
     iniciarCronometro();
-    campo.toggleClass("campo-desativado");
 
+    campo.toggleClass("campo-desativado");
     campo.removeClass ("bordaCampoErrado");
     campo.removeClass ("bordaCampoCerto");
 }

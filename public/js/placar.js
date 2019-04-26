@@ -4,15 +4,14 @@
 // Pontuação do placar.
 function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
-    var usuario = "Seu-nome";
-    var numeroPalavras = $("contador-palavras").text();
+    var usuario = "Jogador";
+    var numeroPalavras = $("#contador-palavras").text();
     
     var linha = novaLinhaPlacar(usuario, numeroPalavras);
     linha.find(".botao-remover").click(removeLinhaPlacar);
 
     corpoTabela.append(linha);
 }
-
 
 
 // Insere uma nova linha dos jogadores.
@@ -38,7 +37,6 @@ function novaLinhaPlacar(usuario, palavras) {
 
     return linha;
 }
-
 
 
 // Botão de remover a pontuação do jogador.
