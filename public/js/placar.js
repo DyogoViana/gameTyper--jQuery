@@ -14,7 +14,21 @@ function inserePlacar() {
     linha.find(".botao-remover").click(removeLinhaPlacar);
 
     corpoTabela.append(linha);
+
+    $(".placar").slideDown(500);
+    scrollPlacar();
 }
+
+
+// Scrolla o placar ao fim do jogo e motra ao usuário.
+function scrollPlacar() {
+    var posicaoPlacar = $(".placar").offset().top;
+
+    $("html, body").animate(
+        {
+            scrolltop: posicaoPlacar + "px"
+        }, 1000);
+    }
 
 
 // Botão mostrar/esconder placar
@@ -60,3 +74,14 @@ function removeLinhaPlacar() {
 
     event.preventDefault();
 }
+
+
+
+
+
+
+
+
+// Anotações:
+
+// $(".placar").offset(); ---> mostra a distância do elemento na página, no caso, o placar.
