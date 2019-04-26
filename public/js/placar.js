@@ -19,7 +19,7 @@ function inserePlacar() {
 
 // Botão mostrar/esconder placar
 function mostrarPlacar() {
-    $(".placar").slideToggle(600); // Valor de velocidade.
+    $(".placar").stop().slideToggle(600); // Valor de velocidade.
 }
 
 
