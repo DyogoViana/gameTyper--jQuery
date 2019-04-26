@@ -1,0 +1,14 @@
+/* areaTexto.css */
+
+
+/* textarea */
+.campo-digitacao {
+    font-size: 1.5rem;
+    height: 10ch;
+}
+
+/* Frase modelo */
+.frase {
+    font-size: 1.5rem;
+    text-align: left;
+}

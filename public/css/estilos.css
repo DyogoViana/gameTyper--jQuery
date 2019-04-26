@@ -1,5 +1,10 @@
 /* estilos.css */
 
+
+body {
+    overflow: scroll;
+}
+
 h1 {
     color: rgb(0, 0, 0);
     background-color: rgb(238, 238, 238);
@@ -20,32 +25,6 @@ section {
     padding-bottom: 10em;
 }
 
-/* textarea */
-.campo-digitacao {
-    font-size: 1.5rem;
-    height: 10ch;
-}
-
-/* Frase modelo */
-.frase {
-    font-size: 1.5rem;
-    text-align: left;
-}
-
-/* textarea desativado (fim do tempo). */
-.campo-desativado {
-    background-color: rgb(221, 221, 221);
-}
-
 .icones {
     vertical-align: middle;
-}
-
-/* Bordas que mostram se a digitação tá certa. */
-.bordaCampoCerto {
-    border: 5px solid rgb(4, 206, 4);
-}
-
-.bordaCampoErrado {
-    border: 5px solid tomato;
 }

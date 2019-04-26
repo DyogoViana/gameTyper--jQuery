@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/libs/materialize.min.css">
     <link rel="stylesheet" href="css/libs/google-fonts.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/areaTexto.css">
+    <link rel="stylesheet" href="css/placar.css">
 </head>
 <body>
     <div class="container">
@@ -19,10 +21,9 @@
             <li>
                 <i class="small material-icons icones">description</i>
                 <span id="tamanho-frase">0</span> palavras.
-            </li>
-            <li>
+
                 <i class="small material-icons icones">query_builder</i>
-                <span id="tempo-digitacao">10</span> segundos
+                <span id="tempo-digitacao">4</span> segundos
             </li>
         </ul>
 
@@ -31,15 +32,25 @@
         
         <!-- Botão reiniciar jogo -->
         <div class="botoes">
+            <!-- Botão de reiniciar o jogo -->
             <a id="botao-reiniciar" class="btn-floating btn-large waves-effect waves-light red">
                 <i class="material-icons">restore</i>
             </a>
+
+            <!-- Botão mostrar/esconder placar -->
+            <a id="botao-placar" class="btn-floating btn-large waves-effect waves-light green">
+                <i class="material-icons">assignment</i>
+            </a>
         </div>
+
 
         <!-- Contador -->
         <ul class="center">
-            <li><span id="contador-caracteres">0</span> caracteres</li>
-            <li><span id="contador-palavras">0</span> palavras</li>
+            <li>
+                <span id="contador-caracteres">0</span> caracteres |
+                <span id="contador-palavras">0</span> palavras
+            </li>
+            
         </ul>
     </div>
 

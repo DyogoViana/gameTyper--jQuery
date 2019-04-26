@@ -1,6 +1,9 @@
 // Placar.js
 
 
+// Botão mostrar/esconder placar.
+$("#botao-placar").click(mostrarPlacar);
+
 // Pontuação do placar.
 function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
@@ -11,6 +14,12 @@ function inserePlacar() {
     linha.find(".botao-remover").click(removeLinhaPlacar);
 
     corpoTabela.append(linha);
+}
+
+
+// Botão mostrar/esconder placar
+function mostrarPlacar() {
+    $(".placar").slideToggle(600); // Valor de velocidade.
 }
 
 

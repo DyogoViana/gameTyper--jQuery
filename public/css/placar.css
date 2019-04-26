@@ -1,0 +1,20 @@
+/* Placar.css */
+
+
+.placar {
+    display: none;
+}
+
+/* textarea desativado (fim do tempo). */
+.campo-desativado {
+    background-color: rgb(221, 221, 221);
+}
+
+/* Bordas que mostram se a digitação estão certas. */
+.bordaCampoCerto {
+    border: 5px solid rgb(4, 206, 4);
+}
+
+.bordaCampoErrado {
+    border: 5px solid tomato;
+}
