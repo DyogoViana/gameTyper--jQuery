@@ -1,5 +1,24 @@
 /* estilos.css */
 
+h1 {
+    color: rgb(0, 0, 0);
+    background-color: rgb(238, 238, 238);
+    margin-bottom: 1em;
+}
+
+p {
+    font-style: italic;
+    margin-bottom: 2em;
+}
+
+.placar h3 {
+    margin-top: 3em;
+    background-color: rgb(238, 238, 238);
+}
+
+section {
+    padding-bottom: 10em;
+}
 
 /* textarea */
 .campo-digitacao {
