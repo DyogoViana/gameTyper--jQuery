@@ -97,21 +97,45 @@ function inserePlacar() {
     var numeroPalavras = $("contador-palavras").text();
     var botaoRemover = "<a href='#'><i class='small material-icons'>delete</i></a>";
 
-    var linha = 
-        "<tr>" +
-            "<td>" + usuario + "</td>" +
-            "<td>" + numeroPalavras + "</td>" +
-            "<td>" + botaoRemover + "</td>" + 
-        "</tr>";
+    var linha = novaLinhaPlacar(usuario, numeroPalavras);
+    linha.find(".botao-remover").click(removeLinhaPlacar);
 
     corpoTabela.prepend(linha);
 }
 
 
-$(".botaoRemover").click(event, function() {
+
+// Insere uma nova linha dos jogadores.
+function novaLinhaPlacar(usuario, palavras) {
+    var linha = $("<tr>");
+    var colunaUsuario = $("<td>").text(usuario);
+    var colunaPalavras = $("<td>").text(palavras);
+    var colunaRemover = $("<td>");
+
+    var link = $("<a>").attr("href", "#");
+    var icone =$("<i>").addClass("small").addClass("material-icons").text("delete");
+
+    // Icone dentro do <a>
+    link.append(icone);
+
+    // <a> dentro do <td>
+    colunaRemover.append(link);
+
+    // Os três <td>'s dentro do <tr>
+    linha.append(colunaUsuario);
+    linha.append(colunaPalavras);
+    linha.append(colunaRemover);
+
+    return linha;
+}
+
+
+
+// Botão de remover a pontuação do jogador.
+function removeLinhaPlacar (event) {
     event.preventDefault();
     $(this).parent().parent().remove();
-}) 
+}
 
 
 
