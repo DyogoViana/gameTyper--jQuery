@@ -59,15 +59,21 @@ function iniciarCronometro () {
             $("#tempo-digitacao").text(tempoRestante);
             
             if (tempoRestante < 1) {
-                campo.attr("disabled", true);
                 clearInterval(cronometroID);
-                campo.addClass("campo-desativado");
-                // $("#botao-reiniciar").attr("disabled", false);
+                finalizaJogo();
             }
         }, 1000);
     });
 }
 
+
+
+// Finaliza o jogo. Desabilita o campo de txt e coloca o fundo cinza.
+function finalizaJogo() {
+    campo.attr("disabled", true);
+    campo.toggleClass("campo-desativado");
+    inserePlacar();
+}
 
 
 // Marcação da borda.

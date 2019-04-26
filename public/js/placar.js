@@ -6,12 +6,11 @@ function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
     var usuario = "Seu-nome";
     var numeroPalavras = $("contador-palavras").text();
-    var botaoRemover = "<a href='#'><i class='small material-icons'>delete</i></a>";
-
+    
     var linha = novaLinhaPlacar(usuario, numeroPalavras);
     linha.find(".botao-remover").click(removeLinhaPlacar);
 
-    corpoTabela.prepend(linha);
+    corpoTabela.append(linha);
 }
 
 
@@ -23,7 +22,7 @@ function novaLinhaPlacar(usuario, palavras) {
     var colunaPalavras = $("<td>").text(palavras);
     var colunaRemover = $("<td>");
 
-    var link = $("<a>").attr("href", "#");
+    var link = $("<a>").addClass("botao-remover").attr("href", "#");
     var icone =$("<i>").addClass("small").addClass("material-icons").text("delete");
 
     // Icone dentro do <a>
