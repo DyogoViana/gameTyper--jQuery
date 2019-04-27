@@ -24,11 +24,8 @@ function inserePlacar() {
 function scrollPlacar() {
     var posicaoPlacar = $(".placar").offset().top;
 
-    $("html, body").animate(
-        {
-            scrolltop: posicaoPlacar + "px"
-        }, 1000);
-    }
+    $("html, body").animate({scrolltop: posicaoPlacar + "px"}, 1000);
+}
 
 
 // Botão mostrar/esconder placar
