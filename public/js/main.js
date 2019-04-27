@@ -1,5 +1,6 @@
 // main.js
 
+
 // Tempo inicial.
 var tempoInicial = $("#tempo-digitacao").text();
 
@@ -17,8 +18,15 @@ $(function() {
 });
 
 
+// Atualiza o tempo inicial.
+function atualizaTempoInicial(tempo) {
+    tempoInicial = tempo;
+    $("#tempo-digitacao").text(tempo);
+}
+
+
 // Atualiza o tamanho da frase. Modelo a ser escrito.
-function atualizaTamanhoFrase () {
+function atualizaTamanhoFrase() {
     var frase = $(".frase").text();
     var numeroPalavras = frase.split(" ").length; 
     var tamanhoFrase = $("#tamanho-frase");
@@ -28,8 +36,8 @@ function atualizaTamanhoFrase () {
 
 
 // Iniciar contadores de palavras e caracteres.
-function iniciarContadores () {
-    campo.on ("input", function () {
+function iniciarContadores() {
+    campo.on("input", function() {
     
         var conteudo = campo.val(); // Ler os value's.
         var conteudoSemEspaco = conteudo.replace(/\s+/g,''); // Exp. regular p/ n contar os espaços.
@@ -46,11 +54,10 @@ function iniciarContadores () {
 
 
 // Cronômentro.
-function iniciarCronometro () {
-    var tempoRestante = $("#tempo-digitacao").text();
-
-    campo.one ("focus", function () {
-        var cronometroID = setInterval (function () {
+function iniciarCronometro() {
+    campo.one("focus", function() {
+        var tempoRestante = $("#tempo-digitacao").text();
+        var cronometroID = setInterval(function() {
             tempoRestante--;
             $("#tempo-digitacao").text(tempoRestante);
             
@@ -65,18 +72,17 @@ function iniciarCronometro () {
 
 // Marcação da borda.
 function inicializaMarcadores() {
-    var frase = $(".frase").text();
-
-    campo.on ("input", function() {
+    campo.on("input", function() {
+        var frase = $(".frase").text();
         var digitado = campo.val();
-        var comparavel = frase.substr (0, digitado.length);
+        var comparavel = frase.substr(0, digitado.length);
         
         if (digitado == comparavel) {
-            campo.addClass ("bordaCampoCerto");
-            campo.removeClass ("bordaCampoErrado");
+            campo.addClass("bordaCampoCerto");
+            campo.removeClass("bordaCampoErrado");
         } else {
-            campo.addClass ("bordaCampoErrado")
-            campo.removeClass ("bordaCampoCerto");
+            campo.addClass("bordaCampoErrado")
+            campo.removeClass("bordaCampoCerto");
         }
     }); 
 }
@@ -91,7 +97,7 @@ function finalizaJogo() {
 
 
 // Botão de reiniciar o jogo.
-function reiniciarJogo () {
+function reiniciarJogo() {
     campo.attr("disabled", false);
     campo.val("");
 
@@ -102,8 +108,8 @@ function reiniciarJogo () {
     iniciarCronometro();
 
     campo.toggleClass("campo-desativado");
-    campo.removeClass ("bordaCampoErrado");
-    campo.removeClass ("bordaCampoCerto");
+    campo.removeClass("bordaCampoErrado");
+    campo.removeClass("bordaCampoCerto");
 }
 
 

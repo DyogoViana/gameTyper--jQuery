@@ -11,5 +11,8 @@ function fraseAleatoria() {
 function trocaFraseAleatoria(data) {
     var frase = $(".frase");
     var numeroAleatorio = Math.floor(Math.random() * data.length);
+
     frase.text(data[numeroAleatorio].texto); // Pega a primeira frase.
+    atualizaTamanhoFrase();
+    atualizaTempoInicial(data[numeroAleatorio].tempo); //'tempo' pq tá assim no array do servidor.
 }
