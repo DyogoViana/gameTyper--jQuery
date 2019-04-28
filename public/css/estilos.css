@@ -5,23 +5,34 @@ body {
     overflow: scroll;
 }
 
+section {
+    padding-bottom: 10em;
+}
+
 h1 {
     color: rgb(0, 0, 0);
     background-color: rgb(238, 238, 238);
     margin-bottom: 1em;
 }
 
-p {
+
+/* ID's */
+#erro {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: tomato;
+    display: none;
+}
+
+
+/* Classes */
+.frase {
     font-style: italic;
     margin-bottom: 2em;
 }
 
 .placar h3 {
     background-color: rgb(238, 238, 238);
-}
-
-section {
-    padding-bottom: 10em;
 }
 
 .icones {

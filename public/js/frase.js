@@ -5,7 +5,13 @@
 $("#botao-frase").click(fraseAleatoria);
 
 function fraseAleatoria() {
-    $.get("http://localhost:3000/frases", trocaFraseAleatoria);
+    $.get("http://localhost:3000/fraseXs", trocaFraseAleatoria).fail(function(){
+        $("#erro").toggle(); // Ao falhar, mostra mensagem de erro.
+
+        setTimeout(function(){
+            $("#erro").toggle();
+        }, 3000);
+    });
 }
 
 function trocaFraseAleatoria(data) {
