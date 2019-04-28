@@ -1,13 +1,9 @@
 /* estilos.css */
 
 
-body {
-    overflow: scroll;
-}
+body { overflow: scroll; }
 
-section {
-    padding-bottom: 10em;
-}
+section { padding-bottom: 10em; }
 
 h1 {
     color: rgb(0, 0, 0);
@@ -24,6 +20,7 @@ h1 {
     display: none;
 }
 
+#spinner { display: none; }
 
 /* Classes */
 .frase {
@@ -31,10 +28,6 @@ h1 {
     margin-bottom: 2em;
 }
 
-.placar h3 {
-    background-color: rgb(238, 238, 238);
-}
+.placar h3 { background-color: rgb(238, 238, 238); }
 
-.icones {
-    vertical-align: middle;
-}
+.icones { vertical-align: middle; }

@@ -4,16 +4,22 @@
 // botão para frases aleatórias.
 $("#botao-frase").click(fraseAleatoria);
 
+// Frases aleatórias com spinner e mensagem de erro.
 function fraseAleatoria() {
-    $.get("http://localhost:3000/fraseXs", trocaFraseAleatoria).fail(function(){
+    $("#spinner").toggle();
+
+    $.get("http://localhost:3000/frases", trocaFraseAleatoria).fail(function(){
         $("#erro").toggle(); // Ao falhar, mostra mensagem de erro.
 
-        setTimeout(function(){
+        setTimeout(function() {
             $("#erro").toggle();
         }, 3000);
+    }).always(function() {
+        $("#spinner").toggle();
     });
 }
 
+// Troca as frases aleatórias.
 function trocaFraseAleatoria(data) {
     var frase = $(".frase");
     var numeroAleatorio = Math.floor(Math.random() * data.length);
