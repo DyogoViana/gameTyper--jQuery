@@ -22,7 +22,12 @@ h1 {
 
 #spinner { display: none; }
 
+#busca-id { width: 3rem;}
+
 /* Classes */
+
+.botoes a { margin: 1.5em;}
+
 .frase {
     font-style: italic;
     margin-bottom: 2em;

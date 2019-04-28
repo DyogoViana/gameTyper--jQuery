@@ -37,7 +37,7 @@
         <textarea class="campo-digitacao" cols="40" rows="8"></textarea>
         
         <!-- Botão reiniciar jogo -->
-        <div class="botoes">
+        <div class="botoes center">
             <!-- Botão de reiniciar o jogo -->
             <a id="botao-reiniciar" class="btn-floating btn-large waves-effect waves-light red">
                 <i class="material-icons">restore</i>
@@ -52,6 +52,15 @@
             <a id="botao-frase" class="btn-floating btn-large waves-effect waves-light blue">
                 <i class="material-icons">shuffle</i>
             </a>
+
+            <!-- Botão que escolhe a frase de acordo com o número do ID. -->
+            <a id="botao-busca-id" class="waves-effect waves-light btn">
+                <i class="material-icons right">repeat_one</i>
+                Escolha o número de sua frase ao lado:
+            </a>
+
+            <!-- Input number que escolhe a frase via id. -->
+            <input id="busca-id" type="number" min="0">    
         </div>
 
 
