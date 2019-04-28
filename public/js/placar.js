@@ -25,7 +25,29 @@ function inserePlacar() {
 
 // Sicroniza o placar.
 function sicronizaPlacar() {
-    
+    var placar = [];
+    var linhas = $("tbody>tr");
+
+    linhas.each(function(){
+        var usuario = $(this).find("td:nth-child(1)").text();
+        var palavras = $(this).find("td:nth-child(2)").text();
+
+        var pontuacao = {
+            usuario: usuario,
+            pontos: palavras
+        };
+
+        placar.push(pontuacao);
+    });
+
+    var dados = {
+        placar: placar
+    };
+
+    // Enviar o placar pro servidor.
+    $.post("http://localhost:3000/placar", dados, function(){
+        console.log("Placar sicronizado com sucesso");
+    });
 }
 
 
