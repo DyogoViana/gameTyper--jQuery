@@ -4,6 +4,9 @@
 // Botão mostrar/esconder placar.
 $("#botao-placar").click(mostrarPlacar);
 
+// Botão de sicronização.
+$("#botao-sicronizacao").click(sicronizaPlacar);
+
 // Pontuação do placar.
 function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
@@ -17,6 +20,12 @@ function inserePlacar() {
 
     $(".placar").slideDown(500);
     scrollPlacar();
+}
+
+
+// Sicroniza o placar.
+function sicronizaPlacar() {
+    
 }
 
 

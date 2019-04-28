@@ -24,6 +24,8 @@ h1 {
 
 #busca-id { width: 3rem;}
 
+#botao-sicronizacao { float: right;}
+
 /* Classes */
 
 .botoes a { margin: 1.5em;}
