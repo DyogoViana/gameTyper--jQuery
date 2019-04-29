@@ -12,9 +12,9 @@ $("#botao-sicronizacao").click(sicronizaPlacar);
 function atualizaPlacar() {
     $.get("http://localhost:3000/placar", function(data) {
         $(data).each(function() {
-            var linha = novaLinha(this.usuario, this.pontos);
+            var linha = novaLinhaPlacar(this.usuario, this.pontos);
 
-            linha.find(".botao-remover").click(removeLinha);
+            linha.find(".botao-remover").click(removeLinhaPlacar);
             $("tbody").append(linha);
         });
     }); 
@@ -73,12 +73,6 @@ function scrollPlacar() {
 }
 
 
-// Botão mostrar/esconder placar
-function mostrarPlacar() {
-    $(".placar").stop().slideToggle(600); // Valor de velocidade.
-}
-
-
 // Insere uma nova linha dos jogadores.
 function novaLinhaPlacar(usuario, palavras) {
     var linha = $("<tr>");
@@ -118,7 +112,10 @@ function removeLinhaPlacar() {
 }
 
 
-
+// Botão mostrar/esconder placar
+function mostrarPlacar() {
+    $(".placar").stop().slideToggle(600); // Valor de velocidade.
+}
 
 
 
