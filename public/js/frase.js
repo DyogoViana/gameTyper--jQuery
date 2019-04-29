@@ -13,7 +13,7 @@ $("#botao-busca-id").click(buscaFrase);
 function fraseAleatoria() {
     $("#spinner").toggle();
 
-    $.get("http://localhost:3000/frases", trocaFraseAleatoria).fail(function(){
+    $.get("http://localhost:3000/frases", trocaFraseAleatoria).fail(function() {
         $("#erro").toggle(); // Ao falhar, mostra mensagem de erro.
 
         setTimeout(function() {
@@ -42,13 +42,13 @@ function buscaFrase() {
     var dados = {id: buscaViaId}; // Criacao do objeto JS que guarda a id.
 
     // Passsando objetos como segundo plano.
-    $.get("http://localhost:3000/frases", dados, trocaFrase).fail(function(){
+    $.get("http://localhost:3000/frases", dados, trocaFrase).fail(function() {
         $("#erro").toggle();
 
-        setTimeout(function(){
+        setTimeout(function() {
             $("#erro").toggle();
         }, 3000);
-    }).always(function(){
+    }).always(function() {
         $("#spinner").toggle();
     });
 }

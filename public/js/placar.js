@@ -7,6 +7,18 @@ $("#botao-placar").click(mostrarPlacar);
 // Botão de sicronização.
 $("#botao-sicronizacao").click(sicronizaPlacar);
 
+
+// Atualiza o placar assim que começa o jogo.
+function atualizaPlacar() {
+    $.get("http://localhost:3000/placar", function(data) {
+        $(data).each(function() {
+            var linha = novaLinha(this.usuario, this.pontos);
+            $("tbody").append(linha);
+        });
+    }); 
+}
+
+
 // Pontuação do placar.
 function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
@@ -45,7 +57,7 @@ function sicronizaPlacar() {
     };
 
     // Enviar o placar pro servidor.
-    $.post("http://localhost:3000/placar", dados, function(){
+    $.post("http://localhost:3000/placar", dados, function() {
         console.log("Placar sicronizado com sucesso");
     });
 }

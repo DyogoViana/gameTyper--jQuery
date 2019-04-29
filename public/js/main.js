@@ -15,6 +15,7 @@ $(function() {
     iniciarCronometro();
     inicializaMarcadores();
     $("#botao-reiniciar").click(reiniciarJogo);
+    atualizaPlacar();
 });
 
 
