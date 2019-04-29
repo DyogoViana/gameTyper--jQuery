@@ -1,14 +1,41 @@
 /* areaTexto.css */
 
 
+
+/* ID's ---------------------------*/
+#erro {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: tomato;
+    display: none;
+}
+
+#spinner { display: none; }
+
+#busca-id { width: 3rem;}
+
+#botao-sicronizacao { float: right;}
+
+
+/* Classes ------------------------*/
+
+.botoes a { margin: 1.5em;}
+.icones { vertical-align: middle; }
+
+/* Frase modelo */
+.frase {
+    font-size: 1.5rem;
+    text-align: left;
+    font-style: italic;
+    margin-bottom: 2em;
+}
+
 /* textarea */
 .campo-digitacao {
     font-size: 1.5rem;
     height: 10ch;
 }
 
-/* Frase modelo */
-.frase {
-    font-size: 1.5rem;
-    text-align: left;
-}
+/* Bordas que mostram se a digitação estão certas. */
+.bordaCampoCerto {border: 5px solid rgb(4, 206, 4);}
+.bordaCampoErrado {border: 5px solid tomato;}

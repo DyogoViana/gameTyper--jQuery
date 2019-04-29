@@ -10,31 +10,3 @@ h1 {
     background-color: rgb(238, 238, 238);
     margin-bottom: 1em;
 }
-
-
-/* ID's */
-#erro {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: tomato;
-    display: none;
-}
-
-#spinner { display: none; }
-
-#busca-id { width: 3rem;}
-
-#botao-sicronizacao { float: right;}
-
-/* Classes */
-
-.botoes a { margin: 1.5em;}
-
-.frase {
-    font-style: italic;
-    margin-bottom: 2em;
-}
-
-.placar h3 { background-color: rgb(238, 238, 238); }
-
-.icones { vertical-align: middle; }
