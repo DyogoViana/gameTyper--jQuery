@@ -1,0 +1,9 @@
+/* Placar.css */
+
+
+.placar {display: none;}
+
+.placar h3 { background-color: rgb(238, 238, 238); }
+
+/* textarea desativado -- fim do tempo. */
+.campo-desativado {background-color: rgb(221, 221, 221);}
