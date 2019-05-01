@@ -1,0 +1,28 @@
+/* index.css */
+
+
+
+/* Id's */
+#botao-jogue{
+	width: 150px;
+	display: block;
+	margin: 50px auto;
+}
+
+
+/* Classes */
+.card{
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.imagem-jogo {border: 2px solid gray;}
+
+.slider {height: auto;}
+
+/* Setas do */
+.slick-prev:before,
+.slick-next:before {
+	color: black;
+}
