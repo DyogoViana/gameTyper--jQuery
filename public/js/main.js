@@ -16,9 +16,14 @@ $(function() {
     inicializaMarcadores();
     $("#botao-reiniciar").click(reiniciarJogo);
     atualizaPlacar();
-    $("#usuarios").selectize({
+
+    $("#usuarios").selectize( {
         create: true,
         sortField: 'text'
+    });
+
+    $(".tooltip").tooltipster( {
+        trigger: "custom"
     });
 });
 

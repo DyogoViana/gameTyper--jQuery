@@ -61,6 +61,13 @@ function sicronizaPlacar() {
     // Enviar o placar pro servidor.
     $.post("http://localhost:3000/placar", dados, function() {
         console.log("Placar sicronizado com sucesso");
+        $(".tooltip").tooltipster("open");
+    }).fail(function() {
+        $(".tooltip").tooltipster("open").tooltipster("content", "Falha ao sicronizar." );
+    }).always(function() {
+        setTimeout(function() {
+            $(".tooltip").tooltipster("close");
+        }, 1200);
     });
 }
 
