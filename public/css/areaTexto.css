@@ -16,11 +16,21 @@
 
 #botao-sicronizacao { float: right;}
 
+#usuarios { display: block; }
+
 
 /* Classes ------------------------*/
 
 .botoes a { margin: 1.5em;}
+
 .icones { vertical-align: middle; }
+
+.select-usuarios { display: inline-block; }
+
+.selectize-input {
+    width: 10rem;
+    vertical-align: middle;
+}
 
 /* Frase modelo */
 .frase {

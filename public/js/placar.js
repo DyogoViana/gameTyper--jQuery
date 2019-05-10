@@ -24,7 +24,7 @@ function atualizaPlacar() {
 // Pontuação do placar.
 function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
-    var usuario = "Jogador";
+    var usuario = $("usuarios").val();
     var numeroPalavras = $("#contador-palavras").text();
     
     var linha = novaLinhaPlacar(usuario, numeroPalavras);
